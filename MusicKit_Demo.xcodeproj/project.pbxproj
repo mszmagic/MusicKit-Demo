@@ -11,6 +11,11 @@
 		DA840D61279BD35A00618A14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA840D60279BD35A00618A14 /* ContentView.swift */; };
 		DA840D63279BD35B00618A14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA840D62279BD35B00618A14 /* Assets.xcassets */; };
 		DA840D66279BD35B00618A14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA840D65279BD35B00618A14 /* Preview Assets.xcassets */; };
+		DA840D6E279BD54B00618A14 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA840D6D279BD54B00618A14 /* AuthView.swift */; };
+		DA840D70279BD71500618A14 /* SubscriptionInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA840D6F279BD71500618A14 /* SubscriptionInfoView.swift */; };
+		DA840D72279BE15A00618A14 /* SearchSongsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA840D71279BE15A00618A14 /* SearchSongsView.swift */; };
+		DA840D75279BF06800618A14 /* SearchAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA840D74279BF06800618A14 /* SearchAlbumView.swift */; };
+		DA840D77279BF07000618A14 /* SongInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA840D76279BF07000618A14 /* SongInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,12 @@
 		DA840D60279BD35A00618A14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DA840D62279BD35B00618A14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA840D65279BD35B00618A14 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DA840D6D279BD54B00618A14 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		DA840D6F279BD71500618A14 /* SubscriptionInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionInfoView.swift; sourceTree = "<group>"; };
+		DA840D71279BE15A00618A14 /* SearchSongsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongsView.swift; sourceTree = "<group>"; };
+		DA840D73279BEDE100618A14 /* MusicKit_Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MusicKit_Demo.entitlements; sourceTree = "<group>"; };
+		DA840D74279BF06800618A14 /* SearchAlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAlbumView.swift; sourceTree = "<group>"; };
+		DA840D76279BF07000618A14 /* SongInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +62,10 @@
 		DA840D5D279BD35A00618A14 /* MusicKit_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				DA840D73279BEDE100618A14 /* MusicKit_Demo.entitlements */,
 				DA840D5E279BD35A00618A14 /* MusicKit_DemoApp.swift */,
 				DA840D60279BD35A00618A14 /* ContentView.swift */,
+				DA840D6C279BD54200618A14 /* Demo */,
 				DA840D62279BD35B00618A14 /* Assets.xcassets */,
 				DA840D64279BD35B00618A14 /* Preview Content */,
 			);
@@ -65,6 +78,18 @@
 				DA840D65279BD35B00618A14 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DA840D6C279BD54200618A14 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				DA840D6D279BD54B00618A14 /* AuthView.swift */,
+				DA840D6F279BD71500618A14 /* SubscriptionInfoView.swift */,
+				DA840D71279BE15A00618A14 /* SearchSongsView.swift */,
+				DA840D74279BF06800618A14 /* SearchAlbumView.swift */,
+				DA840D76279BF07000618A14 /* SongInfoView.swift */,
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA840D75279BF06800618A14 /* SearchAlbumView.swift in Sources */,
 				DA840D61279BD35A00618A14 /* ContentView.swift in Sources */,
+				DA840D70279BD71500618A14 /* SubscriptionInfoView.swift in Sources */,
 				DA840D5F279BD35A00618A14 /* MusicKit_DemoApp.swift in Sources */,
+				DA840D77279BF07000618A14 /* SongInfoView.swift in Sources */,
+				DA840D6E279BD54B00618A14 /* AuthView.swift in Sources */,
+				DA840D72279BE15A00618A14 /* SearchSongsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,12 +296,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MusicKit_Demo/MusicKit_Demo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MusicKit_Demo/Preview Content\"";
 				DEVELOPMENT_TEAM = 9LFMJA3SC2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Access to media library is required to search within Apple Music, and to play songs.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -295,12 +327,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MusicKit_Demo/MusicKit_Demo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MusicKit_Demo/Preview Content\"";
 				DEVELOPMENT_TEAM = 9LFMJA3SC2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Access to media library is required to search within Apple Music, and to play songs.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

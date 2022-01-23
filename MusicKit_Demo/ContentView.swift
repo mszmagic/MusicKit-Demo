@@ -9,8 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                NavigationLink("Auth") {
+                    AuthView()
+                }
+                NavigationLink("Subscription Information") {
+                    SubscriptionInfoView()
+                }
+                NavigationLink("Search for music") {
+                    SearchSongsView()
+                }
+                NavigationLink("Search for album") {
+                    SearchAlbumView()
+                }
+            }
+            .navigationTitle("MusicKit demo")
+        }
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  SearchMusicView.swift
+//  SearchSongsView.swift
 //  MusicKit_Demo
 //
 //  Created by Shunzhe on 2022/01/22.
@@ -8,7 +8,7 @@
 import SwiftUI
 import MusicKit
 
-struct SearchMusicView: View {
+struct SearchSongsView: View {
     
     @State private var searchTerm: String = ""
     @State private var searchResultSongs: MusicItemCollection<Song> = []
@@ -53,26 +53,7 @@ struct SearchMusicView: View {
             }
             
             ForEach(self.searchResultSongs) { song in
-                HStack {
-                    VStack {
-                        Text(song.title)
-                        Text("\(song.artistName) \(song.albumTitle ?? "")")
-                        if let maximumWidth = song.artwork?.maximumWidth,
-                           let maximumHeight = song.artwork?.maximumHeight,
-                           let artworkURL = song.artwork?.url(width: maximumWidth, height: maximumHeight) {
-                            AsyncImage(url: artworkURL) { phase in
-                                if let image = phase.image {
-                                    image
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 100)
-                                } else {
-                                    ProgressView()
-                                }
-                            }
-                        }
-                    }
-                }
+                SongInfoView(songItem: song)
             }
             
         }
@@ -84,10 +65,4 @@ struct SearchMusicView: View {
         
     }
     
-}
-
-struct SearchMusicView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchMusicView()
-    }
 }
