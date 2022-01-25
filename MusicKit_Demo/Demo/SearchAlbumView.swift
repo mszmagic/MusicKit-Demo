@@ -131,6 +131,8 @@ struct AlbumDetailsView: View {
                         EmptyView()
                     }
                 }
+            } else {
+                ProgressView("Loading tracks...")
             }
             
         }
@@ -141,3 +143,6 @@ struct AlbumDetailsView: View {
     }
 
 }
+
+
+
